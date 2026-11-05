@@ -314,7 +314,7 @@
           <li>Lowercase or Capitalize Pinyin.</li>
           <li>Whether the add-on warns before overwriting destination cells.</li>
         </ul>
-        <p>Settings are saved separately for each Google user.</p>
+        <p>Settings are saved separately for each Google user. Restore defaults deletes your saved preferences and returns to the default settings; it does not delete spreadsheet content.</p>
 
         <h2>Troubleshooting</h2>
         <h3>The menu does not appear</h3>
@@ -322,14 +322,14 @@
         <h3>Google asks for authorization</h3>
         <p>The add-on needs authorization to work with the current spreadsheet and display its Settings, Help, and dialogs. It stores preferences using Google Apps Script. Review Google’s permission screen and continue only if you are comfortable granting the listed access.</p>
         <h3>The formula is slow</h3>
-        <p>Conversion uses a bundled dictionary in Google Apps Script. Prefer one range formula, such as <code>=PINYIN(A2:A50)</code>, where practical. Each request is limited to 500 cells and 5,000 characters in total. There is no conversion cache.</p>
+        <p>Conversion uses a bundled dictionary in Google Apps Script. Prefer one range formula, such as <code>=PINYIN(A2:A50)</code>, where practical. Each request is limited to 500 cells and 5,000 characters in total. There is no persistent or cross-execution conversion cache. Repeated text may reuse results temporarily within one execution.</p>
         <h3>A result looks incorrect</h3>
         <p>Some Chinese characters have multiple context-dependent readings. Check names, specialized vocabulary, and ambiguous phrases against a trusted dictionary or instructor, then correct the cell manually if needed.</p>
         <h3>The formula shows #NAME? or Unknown function</h3><p>Open <strong>Extensions → Hanzi to Pinyin → Settings</strong> once in that spreadsheet, then re-enter the formula or refresh the Sheet. Check that the add-on is installed under the same Google account.</p><h3>A conversion error appears</h3>
         <p>Check the error message, request size, and destination cells. Unsupported Chinese characters may produce an error. Menu conversion stops before writing if conversion fails. If the issue continues, send support the exact error message and a non-confidential example.</p>
 
         <h2>Privacy and safe use</h2>
-        <p>Version 1.1 converts text within Google Apps Script using a bundled dictionary. It does not send text to an external conversion service or cache conversion content. Google still hosts Sheets and Apps Script. Review the <a href="/privacy">Privacy Policy</a> for details.</p>
+        <p>Version 1.1 converts text within Google Apps Script using a bundled dictionary. It does not send text to an external conversion service or retain conversion content in a persistent or cross-execution cache. Google still hosts Sheets and Apps Script. Review the <a href="/privacy">Privacy Policy</a> for details.</p>
 
         
     <section class="contact-card">
