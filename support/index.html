@@ -305,22 +305,23 @@
           <li>Choose <strong>Convert selection using settings</strong> or select a specific tone style.</li>
           <li>The add-on writes plain-text results into the same-sized area immediately to the right.</li>
         </ol>
-        <div class="note"><p><strong>Before converting:</strong> Keep the destination cells blank unless you intend to replace their contents. When overwrite warnings are enabled, the add-on asks before replacing existing values.</p></div>
+        <div class="note"><p><strong>Before converting:</strong> Keep the destination cells blank unless you intend to replace their contents. Version 1.1.1 and later always ask before replacing existing values or formulas. Decline the warning to keep the destination unchanged.</p></div>
 
         <h2>Settings</h2>
         <p>Open <strong>Hanzi to Pinyin → Settings</strong> to choose:</p>
         <ul>
           <li>Tone marks, tone numbers, or no tones.</li>
           <li>Lowercase or Capitalize Pinyin.</li>
-          <li>Whether the add-on warns before overwriting destination cells.</li>
+          <li>Existing data is protected by mandatory overwrite confirmation; this protection cannot be disabled.</li>
         </ul>
         <p>Settings are saved separately for each Google user. Restore defaults deletes your saved preferences and returns to the default settings; it does not delete spreadsheet content.</p>
 
+        <p>For in-app instructions, open <strong>Extensions → Hanzi to Pinyin → Usage guide</strong>.</p>
         <h2>Troubleshooting</h2>
         <h3>The menu does not appear</h3>
         <p>Refresh the spreadsheet. If the add-on was just installed, close and reopen the Sheet. Also confirm that the add-on is installed for the Google account currently active in Sheets.</p>
         <h3>Google asks for authorization</h3>
-        <p>The add-on needs authorization to work with the current spreadsheet and display its Settings, Help, and dialogs. It stores preferences using Google Apps Script. Review Google’s permission screen and continue only if you are comfortable granting the listed access.</p>
+        <p>The add-on needs authorization to work with the current spreadsheet and display its Settings, Usage Guide, and dialogs. It stores preferences using Google Apps Script. Review Google’s permission screen and continue only if you are comfortable granting the listed access.</p>
         <h3>The formula is slow</h3>
         <p>Conversion uses a bundled dictionary in Google Apps Script. Prefer one range formula, such as <code>=PINYIN(A2:A50)</code>, where practical. Each request is limited to 500 cells and 5,000 characters in total. There is no persistent or cross-execution conversion cache. Repeated text may reuse results temporarily within one execution.</p>
         <h3>A result looks incorrect</h3>
